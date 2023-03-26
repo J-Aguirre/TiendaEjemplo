@@ -1,5 +1,20 @@
-<h1>Detalle de Producto</h1>
+{% extends 'base.html' %}
 
-<div>
-    {{ product }}
-</div>
+
+{% block title %}
+    Detalle de {{ product.name }}
+{% endblock title %}
+    
+
+{% block content %}
+    <div style="margin: 30px;">
+        <h1>Detalle de Producto</h1>
+
+        <div>
+            {{ object }}
+        </div>
+        <br>
+        <a href="{% url 'products_app:list_products' %}" class="btn bg-gray-300 btn-circle"><i class="fas fa-arrow-left"></i></a>
+    </div>
+{% endblock content %}
+    

@@ -8,6 +8,9 @@ class User(models.Model):
     # TODO: Define fields here
     first_name = models.CharField('Nombre', max_length=50)
     last_name = models.CharField('Apellido', max_length=50)
+    age = models.IntegerField('Edad')
+    email = models.CharField('COrreo Electronico', max_length=50)
+    password = models.CharField('Contraseña', max_length=50)
 
     class Meta:
         """Meta definition for User."""

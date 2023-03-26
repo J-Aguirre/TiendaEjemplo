@@ -19,6 +19,7 @@ class InicioView(TemplateView):
 class ProductListView(ListView):
     model = Product
     template_name = "products/list_products.html"
+    paginate_by = 5
 
 
 class ProductByKeyListView(ListView):

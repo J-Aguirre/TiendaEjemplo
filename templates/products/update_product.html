@@ -1,6 +1,21 @@
-<h1>Editar Producto</h1>
+{% extends 'base.html' %}
 
-<form method="POST">
-    {{ form.as_p }}
-    <button type="submit">Actualizar</button>
-</form>
+
+{% block title %}
+    Editando {{ product.name }}
+{% endblock title %}
+    
+
+{% block content %}
+    <div style="margin: 30px;">
+        <h1>Editar Producto</h1>
+
+        <form method="POST">
+            {{ form.as_p }}
+            <button type="submit">Actualizar</button>
+        </form>
+        <br>
+        <a href="{% url 'products_app:list_products' %}" class="btn bg-gray-300 btn-circle"><i class="fas fa-arrow-left"></i></a>
+    </div>
+{% endblock content %}
+    

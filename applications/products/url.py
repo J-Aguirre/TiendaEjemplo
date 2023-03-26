@@ -2,6 +2,8 @@ from django.urls import path
 
 from . import views
 
+app_name = 'products_app'
+
 urlpatterns = [
     path(
         '',
@@ -26,7 +28,7 @@ urlpatterns = [
     path(
         'update-product/<pk>',
         views.ProductUpdateView.as_view(),
-        name='update-product'
+        name='update_product'
     ),
     path(
         'delete-product/<pk>',

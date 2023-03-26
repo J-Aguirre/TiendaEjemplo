@@ -1,6 +1,18 @@
-<h1>Crear Producto</h1>
+{% extends 'base.html' %}
 
-<form method="POST"> {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Agregar</button>
-</form>
+
+{% block title %}
+    Agregar Producto
+{% endblock title %}
+
+
+{% block content %}
+<div style="margin: 50px;">
+    <h1>Crear Producto</h1>
+
+    <form method="POST"> {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Agregar</button>
+    </form>
+</div>
+{% endblock content %}
